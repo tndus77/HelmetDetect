@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends Activity {
     EditText login_email, login_password;
-    Button login_button;
+    Button login_button, signup_button;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -31,6 +31,7 @@ public class Login extends Activity {
         login_password = findViewById(R.id.login_password);
 
         login_button = findViewById(R.id.login_button);
+        signup_button = findViewById(R.id.signup_button);
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +51,14 @@ public class Login extends Activity {
                             }
                         });
         }
+        });
+
+        signup_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Authenticated.class);
+                startActivity(intent);
+            }
         });
     }
 
