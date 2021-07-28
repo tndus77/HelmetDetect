@@ -36,6 +36,9 @@ android {
             }
         }
     }
+    aaptOptions {
+        noCompress "tflite"
+    }
 }
 
 dependencies {
@@ -64,6 +67,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-modeldownloader'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    // Tensorflow
+    implementation 'org.tensorflow:tensorflow-lite:+'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
