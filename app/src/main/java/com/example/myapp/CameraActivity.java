@@ -127,6 +127,8 @@ public class CameraActivity extends AppCompatActivity {
             // 텍스트뷰에 무슨 버섯인지 띄우기 but error남 ㅜㅜ 붉은 사슴뿔만 주구장창
             if (output[0][0] * 100 > 80) {
                 tv_output.setText(String.format("with_helmet, %.5f", output[0][0] * 100));
+                Intent intent = new Intent(getApplicationContext(), Authenticated.class);
+                startActivity(intent);
             } else {
                 tv_output.setText(String.format("without_helmet,  %.5f", output[0][1] * 100));
             }
