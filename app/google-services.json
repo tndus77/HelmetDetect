@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1005519654204",
+    "firebase_url": "https://helmetdetecting-default-rtdb.firebaseio.com",
+    "project_id": "helmetdetecting",
+    "storage_bucket": "helmetdetecting.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005519654204:android:0f04a8af6b378a4b69a239",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005519654204-daga0jnqrdcigjnpnm7f3p8sefds6mcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfGpSTsmeAQhR7da-7tcVzutMv5MUv7Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005519654204-daga0jnqrdcigjnpnm7f3p8sefds6mcd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005519654204:android:70d524208677118169a239",
+        "android_client_info": {
+          "package_name": "com.example.week4_camera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005519654204-daga0jnqrdcigjnpnm7f3p8sefds6mcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfGpSTsmeAQhR7da-7tcVzutMv5MUv7Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005519654204-daga0jnqrdcigjnpnm7f3p8sefds6mcd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

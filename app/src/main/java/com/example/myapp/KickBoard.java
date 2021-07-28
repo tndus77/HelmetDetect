@@ -2,10 +2,13 @@ package com.example.myapp;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -19,6 +22,8 @@ public class KickBoard extends Activity {
     TextView appname, num, per, add, percent, thousand, ten;
     Button btn1;
     ImageView imageView2;
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +43,12 @@ public class KickBoard extends Activity {
             @Override
             public void onClick(View view) {
                 //카메라랑 연결되도록 만들기
+                Intent intent = new Intent(getApplicationContext(), CameraActivity.class);
+                startActivity(intent);
+                Log.e("GAEUN LOG:: ", "clicked btn1");
                 finish();
             }
         });
     }
+
 }
