@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -52,7 +53,9 @@ public class PermissionSupport {
     }
 
     public void requestPermission(){
+        Log.e("GAEUN LOG::", "requestPermission 1");
         ActivityCompat.requestPermissions(activity, (String[]) permissionList.toArray(new String[permissionList.size()]), MULTIPLE_PERMISSIONS);
+        Log.e("GAEUN LOG::", "requestPermission 2");
     }
 
     public boolean permissionResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){

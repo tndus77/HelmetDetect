@@ -84,7 +84,9 @@ public class CameraActivity extends AppCompatActivity {
                     return;
                 }
                 try {
+                    Log.e("GAEUN LOG::", "<1>");
                     FileOutputStream fos = new FileOutputStream(pictureFile);
+                    Log.e("GAEUN LOG::", "<2>");
                     fos.write(data);
                     fos.close();
                     // Convert File to Bitmap
@@ -183,6 +185,12 @@ public class CameraActivity extends AppCompatActivity {
     private static File getOutputMediaFile(int type, Context context){
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "MyCameraApp");
+
+
+        Log.e("GAEUN LOG::", "<mediaStorageDir>");
+        Log.e("GAEUN LOG::", "  exists? " + mediaStorageDir.exists());
+        Log.e("GAEUN LOG::", "  isDirectory? " + mediaStorageDir.isDirectory());
+        Log.e("GAEUN LOG::", "  value? " + mediaStorageDir);
         // Create the storage directory if it does not exist
         if (! mediaStorageDir.exists()){
             if (! mediaStorageDir.mkdirs()) {
@@ -197,8 +205,15 @@ public class CameraActivity extends AppCompatActivity {
         if (type == MEDIA_TYPE_IMAGE){
             mediaFile = new File(mediaStorageDir.getPath() + File.separator +
                     "IMG_"+ timeStamp + ".jpg");
-            String filePath = mediaFile.getPath();
+            Log.e("GAEUN LOG::", "<mediaFile.getParentFile()>");
+            Log.e("GAEUN LOG::", "  exists? " + mediaFile.getParentFile().exists());
+            Log.e("GAEUN LOG::", "  isDirectory? " + mediaFile.getParentFile().isDirectory());
+            Log.e("GAEUN LOG::", "  value? " + mediaFile.getParentFile());
+            Log.e("GAEUN LOG::", "<mediaFile>");
 
+            Log.e("GAEUN LOG::", "  exists? " + mediaFile.exists());
+            Log.e("GAEUN LOG::", "  isDirectory? " + mediaFile.isDirectory());
+            Log.e("GAEUN LOG::", "  value? " + mediaFile);
         } else {
             return null;
         }
