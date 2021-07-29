@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#FFF">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -13,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="-2dp"
-        android:background="@drawable/tadak" />
+        android:background="@drawable/nukki"/>
 
     <LinearLayout
         android:id="@+id/signin_layout"
