@@ -4,13 +4,19 @@
 ## Team information
 ##### Members : 박수연, 임가은, 이권은
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59522019/127528148-2a4fed46-ece2-413c-8293-e05abbe5ef50.jpg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/59522019/127528153-a6fc8b4f-8d3c-4236-9b46-84b4f71396b1.jpg" width="200" height="400" >
+</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59522019/127528185-7a61ca97-d65d-4fb3-8b60-d5b33de5b72a.jpg" width="200" height="400" > <img src="https://user-images.githubusercontent.com/59522019/127528158-871f165c-fd16-4431-832d-58b56f9aa7af.jpg" width="200" height="400" > <img src="https://user-images.githubusercontent.com/59522019/127528179-48009a6d-1fea-4fcd-9035-2566a1dfc175.jpg" width="200" height="400">
+</p>
+
 ## 사용 방법
 1. 회원가입과 로그인을 완료한다
 2. 지도에서 이용할 공유킥보드를 선택한다
 3. 대여하기 버튼을 누르면 셀프 캠 화면이 켜진다
 4. 헬멧을 착용한 후, 가이드라인에 맞추어 사진을 찍는다
 5. TADAK에게 헬멧 착용 여부를 확인받고 킥보드를 대여한다
-
 
 ## 모델 학습
 헬멧을 쓴 사람과 쓰지 않은 사람을 구분하도록 만드는 것이 학습의 목적이었습니다.
