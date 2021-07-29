@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#494545"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Authenticated">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="300px"
+        android:layout_height="600px"
+        android:gravity="center"
+        app:srcCompat="@drawable/helmet_ok" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:text="대여 완료!"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
