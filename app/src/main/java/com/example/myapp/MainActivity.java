@@ -1,5 +1,6 @@
 package com.example.myapp;
 
+import android.os.Build;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -32,11 +33,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private PermissionSupport permission;
     private View nav_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        permissionCheck();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -103,5 +106,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void permissionCheck() {
+        if(Build.VERSION.SDK_INT >= 23){
+            permission = new PermissionSupport(this, this);
+
+            if(!permission.checkPermission()){
+                permission.requestPermission();
+            }
+        }
     }
 }
