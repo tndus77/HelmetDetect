@@ -28,7 +28,7 @@
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/num"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -45,43 +45,40 @@
 
     <TextView
         android:id="@+id/battery1"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="44dp"
         android:text="배터리잔량"
         android:textSize="15dp"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/num" />
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/per"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+        android:layout_marginLeft="5dp"
         android:text="첫 10분"
         android:textSize="15dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/add"
-        app:layout_constraintStart_toStartOf="@+id/add"
-        app:layout_constraintTop_toBottomOf="@+id/battery1"
+        app:layout_constraintLeft_toRightOf="@+id/battery1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.545" />
 
     <TextView
         android:id="@+id/add"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="5dp"
         android:text="추가 1분당"
         android:textSize="15dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/btn1"
-        app:layout_constraintTop_toBottomOf="@+id/battery1"
+        app:layout_constraintLeft_toRightOf="@+id/per"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.567" />
 
     <Button
@@ -89,63 +86,59 @@
         android:layout_width="141dp"
         android:layout_height="42dp"
         android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:text="대여하기"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/ten"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/per" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thousand" />
 
     <TextView
         android:id="@+id/percent"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
         android:textSize="15dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/battery1"
-        app:layout_constraintStart_toEndOf="@+id/battery1" />
+        app:layout_constraintTop_toBottomOf="@+id/battery1"
+        app:layout_constraintLeft_toLeftOf="@+id/view"/>
 
     <TextView
         android:id="@+id/thousand"
-        android:layout_width="47dp"
+        android:layout_width="100dp"
         android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
         android:text="1000원"
         android:textColor="@color/white"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/percent"
-        app:layout_constraintTop_toBottomOf="@+id/percent" />
+        app:layout_constraintTop_toBottomOf="@+id/per"
+        app:layout_constraintLeft_toRightOf="@+id/percent" />
 
     <TextView
         android:id="@+id/ten"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="36dp"
-        android:text="10분"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="10원"
         android:textColor="@color/white"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/thousand"
-        app:layout_constraintTop_toBottomOf="@+id/thousand" />
+        app:layout_constraintTop_toBottomOf="@+id/add"
+        app:layout_constraintLeft_toRightOf="@+id/thousand"/>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="186dp"
-        android:layout_height="264dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/appname"
         app:srcCompat="@drawable/realkick" />
 
 
