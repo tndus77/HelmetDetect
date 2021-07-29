@@ -2,6 +2,7 @@ package com.example.myapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 
@@ -21,6 +22,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -53,6 +56,7 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -77,8 +81,8 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback {
         map = googleMap;
 
 
-        double[] latitude = new double[]{36.373884, 36.373458, 36.373518, 36.372860, 36.372959, 36.373840, 36.373581, 36.371666, 36.369956, 36.370829};
-        double[] longitude = new double[]{127.365274, 127.363476, 127.364477, 127.364286,127.362314, 127.361542, 127.360196, 127.364707, 127.366219, 127.362636};
+        double[] latitude = new double[]{36.372904, 36.373458, 36.373518, 36.372860, 36.372959, 36.373840, 36.373581, 36.371666, 36.369956, 36.370829};
+        double[] longitude = new double[]{127.365607, 127.363476, 127.364477, 127.364286,127.362314, 127.361542, 127.360196, 127.364707, 127.366219, 127.362636};
 
         // for loop를 통한 n개의 마커 생성
         for (int idx = 0; idx < 10; idx++) {
@@ -94,6 +98,7 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback {
             Bitmap smallMarker = Bitmap.createScaledBitmap(b, 200, 200, false);
             markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
             map.addMarker(markerOptions);
+
         }
         //정보창 클릭 리스너
         map.setOnInfoWindowClickListener(infoWindowClickListener);
