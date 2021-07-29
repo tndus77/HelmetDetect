@@ -104,9 +104,9 @@ public class CameraActivity extends AppCompatActivity {
                     //buf.close();
 
                     // x,y 최댓값 사진 크기에 따라 달라짐 (조절 해줘야함)
-                    for (int x = 0; x < bitmap.getWidth(); x++) {
-                        for (int y = 0; y < bitmap.getHeight(); y++) {
-                            int pixel = bitmap.getPixel(x, y);
+                    for (int x = 0; x < 224; x++) {
+                        for (int y = 0; y < 224; y++) {
+                            int pixel = imageBitmap.getPixel(x, y);
                             input[batchNum][x][y][0] = Color.red(pixel) / 1.0f;
                             input[batchNum][x][y][1] = Color.green(pixel) / 1.0f;
                             input[batchNum][x][y][2] = Color.blue(pixel) / 1.0f;
