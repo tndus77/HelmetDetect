@@ -46,6 +46,7 @@
         android:layout_gravity="center"
         android:text="Take Photo"
         android:background="@drawable/take_photo"
+        android:backgroundTint="#84CFE6"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/camera_preview"
         app:layout_constraintEnd_toEndOf="parent"
