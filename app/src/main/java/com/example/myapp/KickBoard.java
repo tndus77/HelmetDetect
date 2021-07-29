@@ -34,7 +34,6 @@ public class KickBoard extends Activity {
 
         percent = (TextView) findViewById(R.id.percent);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
-        imageView2.setImageResource(R.drawable.kickkick);
 
         //String[] battery = new String[]{"36%", "89%", "94%", "38%", "79%", "72%", "68%", "86%", "35%", "76%"};
         percent.setText("73%");
