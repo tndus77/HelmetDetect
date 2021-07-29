@@ -129,6 +129,8 @@ public class CameraActivity extends AppCompatActivity {
                     } else {
                         Log.d("without_helmet", "without_helmet");
                         tv_output.setText(String.format("without_helmet,  %.5f", output[0][1] * 100));
+                        Intent intent = new Intent(getApplicationContext(), notAuthenticated.class);
+                        startActivity(intent);
                     }
 
                 } catch (FileNotFoundException e) {

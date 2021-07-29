@@ -11,6 +11,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -22,7 +23,10 @@
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true">
 
-        <activity android:name=".Authenticated"></activity>
+        <activity android:name=".Authenticated">
+
+        </activity>
+        <activity android:name=".notAuthenticated"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
