@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.myapp.ui.home.HomeFragment;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         permissionCheck();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
