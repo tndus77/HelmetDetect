@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Register extends AppCompatActivity {
+public class Register extends Activity {
     private static final String TAG = "RegisterActivity";
     private FirebaseAuth mAuth;
     private Button sign_up;
