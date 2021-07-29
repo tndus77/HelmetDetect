@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#233075"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Authenticated">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="300px"
+        android:layout_height="600px"
+        android:gravity="center"
+        app:srcCompat="@drawable/helmet_ok" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="WARNING !"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="헬멧을 올바르게 착용한 후 다시 사진을 찍어 주세요"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/button_retake"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="사진 다시 찍기"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/buttonshape" />
+
+</LinearLayout>
