@@ -14,6 +14,14 @@
         tools:layout_editor_absoluteX="-73dp"
         tools:layout_editor_absoluteY="0dp" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:textAlignment="center"
+        android:text="화면에 보이는대로 사진을 찍어주세요" />
+
     <ImageView
         android:id="@+id/guideline"
         android:layout_width="450dp"
@@ -29,14 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/guideline"
-        android:text="TextView" />
+        android:text="" />
 
     <Button
         android:id="@+id/button_capture"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Take Photo"
+        android:background="@drawable/take_photo"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/camera_preview"
         app:layout_constraintEnd_toEndOf="parent"
