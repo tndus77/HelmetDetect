@@ -50,8 +50,6 @@ public class Login extends Activity {
                                     Intent intent = new Intent(Login.this, MainActivity.class);
                                     startActivity(intent);
 
-                                }else{
-                                    Toast.makeText(Login.this,"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -61,7 +59,7 @@ public class Login extends Activity {
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Authenticated.class);
+                Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
             }
         });

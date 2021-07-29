@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.myapp.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private View nav_view;
-    private TextView email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +48,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        Intent intent = getIntent();
-        String stringEmail = intent.getStringExtra("email");
+        //Intent intent = getIntent();
+        //String stringEmail = intent.getStringExtra("email");
         //email.setText(stringEmail);
-        Log.w("soyeon:: ",stringEmail);
-        Resources res = getResources();
-        String realemail = String.format(res.getString(R.string.nav_header_subtitle), stringEmail);
-        Log.w("soyeon:: ", realemail);
+        //Log.w("soyeon:: ",stringEmail);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         nav_view = navigationView.getHeaderView(0);
-        email = (TextView) nav_view.findViewById(R.id.login_email);
 
         MapsActivity mapsActivity = new MapsActivity();
         FragmentManager manager = getSupportFragmentManager();
