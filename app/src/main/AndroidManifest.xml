@@ -32,24 +32,31 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".Register"></activity>
+
+        <activity android:name=".Register">
+        </activity>
+
         <activity
             android:name=".KickBoard"
             android:theme="@android:style/Theme.Holo.Dialog" />
-        <activity android:name=".CameraActivity"></activity>
+
+        <activity android:name=".CameraActivity">
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Myapp.NoActionBar"></activity>
+            android:theme="@style/Theme.Myapp.NoActionBar">
 
+        </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.myapp.fileprovider"

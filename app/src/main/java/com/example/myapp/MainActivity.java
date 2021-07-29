@@ -1,9 +1,14 @@
 package com.example.myapp;
 
 import android.os.Build;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -17,14 +22,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapp.databinding.ActivityMainBinding;
+import com.google.rpc.context.AttributeContext;
 
 import org.jetbrains.annotations.NotNull;
+
+import io.grpc.internal.SharedResourceHolder;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private PermissionSupport permission;
+    private View nav_view;
+    private TextView email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +51,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);*/
+        Intent intent = getIntent();
+        String stringEmail = intent.getStringExtra("email");
+        //email.setText(stringEmail);
+        Log.w("soyeon:: ",stringEmail);
+        Resources res = getResources();
+        String realemail = String.format(res.getString(R.string.nav_header_subtitle), stringEmail);
+        Log.w("soyeon:: ", realemail);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        nav_view = navigationView.getHeaderView(0);
+        email = (TextView) nav_view.findViewById(R.id.login_email);
 
         MapsActivity mapsActivity = new MapsActivity();
         FragmentManager manager = getSupportFragmentManager();
